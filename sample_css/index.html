@@ -12,6 +12,10 @@
             color: red;
         }
 
+        h1 a {
+            color: blue;
+        }
+
         /* div a {
             color: green;
         }
@@ -28,6 +32,10 @@
             background-color: lightgray;
         }
 
+        /* #exec-bio.alert {
+            background: red;
+        } */
+
         .bio-box {
             border: 1px solid black;
         }
@@ -36,12 +44,33 @@
             color: green;
         }
 
+        .bio-box a {
+            color: blue;
+        }
+
         #first-link {
             color: green;
         }
 
         .bubble {
-            background-color: azure;
+            background: azure;
+        }
+
+        .alert {
+            background: pink;
+        }
+
+        .bio-box {
+            width: 75%;
+        }
+
+        .bio-box {
+            width: 50%;
+        }
+
+        body div#exec-bio.bio-box a {
+            color: white;
+            background: red;
         }
     </style>
 </head>
@@ -61,7 +90,7 @@
     </ul>
     
     <h2>I'm h2</h2>
-    <div id="exec-bio" class="bio-box bubble">
+    <div id="exec-bio" class="bio-box alert">
         <a href="https://example.com/">I'm a Link</a>
     </div>
     <div class="bio-box bubble">
@@ -70,8 +99,12 @@
     <div class="bio-box bubble">
         <a href="https://example.com/">I'm a Link</a>
     </div>
-    <div class="bio-box bubble">
+    <div class="bio-box alert">
         <a href="https://example.com/">I'm a Link</a>
     </div>
+
+    <h1>
+        <a href="https://example.com">Test</a>
+    </h1>
 </body>
 </html>
