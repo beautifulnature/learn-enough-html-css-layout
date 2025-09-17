@@ -5,4 +5,3 @@ This is the reference implementation for the sample website developed in
 
 To report any errors or discrepancies with the text, please email michael@learnenough.com.
 
-Hi
