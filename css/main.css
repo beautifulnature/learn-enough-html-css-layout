@@ -21,7 +21,10 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: helvetica, arial, sans;
+    min-height: 100vh;
 }
 
 h1 {
@@ -39,6 +42,7 @@ a {
 
 p {
     line-height: 1.5;
+    margin: 0.75em 0;
 }
 
 /* h2+p {
@@ -148,6 +152,13 @@ h2~p {
     color: #ed6e2f;
 }
 
+.content-container {
+    display: flex;
+    flex: 1 1 auto;
+    padding-top: 10vh;
+    width: 100%;
+}
+
 /* FOOTER STYLES */
 .footer {
     background-color: #000;
@@ -191,19 +202,67 @@ h2~p {
 }
 
 .home-callout {
+    align-items: center;
     background-color: #000;
     color: #fff;
+    display: flex;
+    /* flex-direction: column-reverse; */
     padding: 7vh 0;
 }
 
+.home-callout h3 {
+    color: inherit;
+    margin-top: 1em;
+}
+
 .callout-title {
+    /* flex-basis: 0; */
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* flex: 1 1 0; */
+    flex: 1;
     font-size: 5.75vw;
     text-align: right;
     text-transform: uppercase;
 }
 
 .callout-copy {
+    /* flex-basis: 45em; */
+    /* flex-grow: 0; */
+    /* flex-shrink: 0; */
+    flex: 0 0 45em;
     font-size: 0.8rem;
+    padding: 3vw;
+}
+
+.col-three {
+    display: flex;
+    flex: 1;
+}
+
+.col {
+    box-sizing: border-box;
+    padding: 2em;
+}
+
+.col-three .col ~ .col {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.col-three .col-nav {
+    /* flex: 0 1 15em; */
+    /* flex: 1; */
+    flex: 0 0 auto;
+}
+
+.col-three .col-content {
+    flex: 1;
+}
+
+.col-three .col-aside {
+    /* flex: 0 1 20em; */
+    flex: 0 0 auto;
+    /* flex: 1; */
 }
 
 /* HERO STYLES */
@@ -211,10 +270,10 @@ h2~p {
     background-color: #c7dbfc;
     background-size: cover;
     /* background-size: 300px auto; */
-    background-repeat: no-repeat;
-    /* box-sizing: border-box; */
-    height: 100vh;
-    padding-top: 10vh;
+    /* background-repeat: no-repeat; */
+    box-sizing: border-box;
+    height: 90vh;
+    /* padding-top: 10vh; */
     /* position: relative; */
 }
 
@@ -229,7 +288,7 @@ h2~p {
     height: 0;
     font-size: 36px;
     left: 50%;
-    position: relative;
+    position: absolute;
     transform: translate(-50%, 0);
     width: 0;
 }
