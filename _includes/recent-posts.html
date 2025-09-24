@@ -1,0 +1,10 @@
+<ul class="blog-title-list">
+  {% for post in site.posts limit: 5 %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span>Posted: {{ post.date | date: '%B %d, %Y' }} </span>
+      {% comment %} {{ post.author }} {% endcomment %}
+      {% comment %} <img src="{{ post.gravatar }}">  {% endcomment %}
+    </li>
+  {% endfor %}
+</ul>
